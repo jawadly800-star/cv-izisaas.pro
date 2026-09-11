@@ -97,6 +97,36 @@ const cvData = {
       desc: "Figure emblématique de la sagesse et de la mémoire sahélienne, coiffé du chapeau pastoral traditionnel, entouré de chèvres et de chats sous la canopée protectrice des arbres séculaires.",
       dimensions: "Toile originale",
       year: "Atelier Village des Arts"
+    },
+    {
+      id: "art-4",
+      title: "La Veillée du Savoir — L'Enfant au Feu",
+      category: "Scène de Vie & Quête du Savoir",
+      image: "assets/images/oeuvre-lecture-au-feu.jpg",
+      medium: "Acrylique et techniques mixtes sur toile • Signée Jawad",
+      desc: "Scène intimiste où la lueur d'un feu de bois éclaire la soif d'apprendre d'un jeune garçon absorbé par son livre au cœur du village.",
+      dimensions: "Toile originale sur châssis",
+      year: "Atelier Jawad Ly"
+    },
+    {
+      id: "art-5",
+      title: "Le Jeune Voyageur à l'Âne",
+      category: "Peinture Figurative & Coutumes",
+      image: "assets/images/oeuvre-voyageur-ane.jpg",
+      medium: "Huile et acrylique sur toile texturée • Signée JaWaD 23",
+      desc: "Voyage pastoral à dos d'âne sous la clarté sahélienne. Évocation touchante de l'enfance rurale et du compagnonnage fidèle.",
+      dimensions: "Œuvre originale signée 'JaWaD 23'",
+      year: "2023"
+    },
+    {
+      id: "art-6",
+      title: "La Transmission du Savoir — Le Maître & les Disciples",
+      category: "Mémoire, Éducation & Sagesse",
+      image: "assets/images/oeuvre-transmission-savoir.jpg",
+      medium: "Acrylique, matières et pigments sur toile • Signée JawadLy 23",
+      desc: "Célébration de la transmission ancestrale et des précieux manuscrits, où le maître guide avec bienveillance ses jeunes élèves dans l'amour de la connaissance.",
+      dimensions: "Œuvre originale signée 'JawadLy 23'",
+      year: "2023"
     }
   ],
 
