@@ -1,0 +1,252 @@
+/* ==========================================================================
+   JAWAD LY - PRINT & PDF EXPORT STYLESHEET
+   Format A4 optimisé pour le téléchargement et l'impression en PDF
+   ========================================================================== */
+
+@media print {
+  /* Masquer les éléments interactifs et décoratifs web */
+  .site-header,
+  .btn,
+  .btn-icon-toggle,
+  .floating-pill,
+  .bg-grid-pattern,
+  .filter-tabs,
+  .contact-form,
+  .modal-overlay,
+  .toast-message,
+  .site-footer,
+  body::before,
+  body::after {
+    display: none !important;
+  }
+
+  /* Reset global pour impression papier / PDF */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .section {
+    padding-block: 1.5rem !important;
+    page-break-inside: avoid;
+  }
+
+  /* Hero Section format CV Papier */
+  .hero-section {
+    padding-top: 0 !important;
+    padding-bottom: 1.5rem !important;
+    min-height: auto !important;
+    border-bottom: 2px solid #e5e7eb;
+  }
+
+  .hero-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 2rem !important;
+  }
+
+  .hero-visual-wrapper {
+    width: 120px !important;
+    flex-shrink: 0;
+  }
+
+  .hero-visual-frame {
+    padding: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+  }
+
+  .hero-image-box {
+    width: 110px !important;
+    height: 110px !important;
+    border-radius: 8px !important;
+    border: 2px solid #d97706;
+  }
+
+  .hero-title {
+    font-size: 22pt !important;
+    color: #0f172a !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 11pt !important;
+    color: #374151 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .hero-contact-bar {
+    border: none !important;
+    padding-top: 0.25rem !important;
+    display: flex !important;
+    gap: 1.5rem !important;
+    font-size: 9pt !important;
+    color: #1f2937 !important;
+  }
+
+  /* Heritage Lignée LY */
+  .heritage-card {
+    background: #f9fafb !important;
+    border: 1px solid #e5e7eb !important;
+    border-left: 4px solid #d97706 !important;
+    padding: 1rem !important;
+    border-radius: 6px !important;
+  }
+
+  .heritage-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1rem !important;
+    margin-top: 1rem !important;
+  }
+
+  .heritage-member-box {
+    padding: 0.75rem !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+  }
+
+  .member-name {
+    font-size: 11pt !important;
+    color: #111827 !important;
+  }
+
+  /* Stats */
+  .stats-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 0.75rem !important;
+    margin-top: 0.5rem !important;
+  }
+
+  .stat-card {
+    padding: 0.75rem !important;
+    background: #f9fafb !important;
+    border: 1px solid #e5e7eb !important;
+  }
+
+  .stat-value {
+    font-size: 18pt !important;
+    color: #d97706 !important;
+    -webkit-text-fill-color: #d97706 !important;
+  }
+
+  /* Timeline Parcours */
+  .timeline-container {
+    padding-left: 1.5rem !important;
+  }
+
+  .timeline-container::before {
+    background: #d97706 !important;
+  }
+
+  .timeline-dot {
+    width: 12px !important;
+    height: 12px !important;
+    left: -1.5rem !important;
+    border-color: #d97706 !important;
+    background: #ffffff !important;
+  }
+
+  .timeline-content {
+    padding: 1rem !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: none !important;
+  }
+
+  .timeline-role {
+    font-size: 12pt !important;
+    color: #111827 !important;
+  }
+
+  .timeline-period {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border: none !important;
+  }
+
+  /* Compétences */
+  .skills-columns {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  .skill-box {
+    padding: 1rem !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+  }
+
+  .skill-track {
+    background: #e5e7eb !important;
+  }
+
+  .skill-progress {
+    background: #d97706 !important;
+  }
+
+  /* Projets */
+  .projects-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  .project-card {
+    border: 1px solid #e5e7eb !important;
+    background: #ffffff !important;
+    break-inside: avoid;
+  }
+
+  .project-thumb {
+    height: 120px !important;
+    aspect-ratio: auto !important;
+  }
+
+  .project-body {
+    padding: 0.75rem !important;
+  }
+
+  /* Contact */
+  .contact-card-wrapper {
+    background: #f9fafb !important;
+    border: 1px solid #e5e7eb !important;
+    padding: 1.5rem !important;
+  }
+
+  .contact-layout {
+    display: block !important;
+  }
+
+  .contact-info-col {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  .contact-channel-item {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    padding: 0.75rem !important;
+  }
+}

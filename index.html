@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouhamad Jawad LY | Artiste Plasticien, Designer Graphique & Vibe Coder</title>
+  <meta name="description" content="Site officiel et portfolio de Mouhamad Jawad LY, artiste plasticien sénégalais (Village des Arts, Dakar), lauréat du 3e prix de l'Union Européenne, designer graphique et vibe coder.">
+  <meta name="author" content="Mouhamad Jawad LY">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mouhamad Jawad LY | Artiste Plasticien Contemporain">
+  <meta property="og:description" content="Découvrez les œuvres picturales, la biographie et le parcours de Mouhamad Jawad LY.">
+  <meta property="og:image" content="assets/images/jawad-ly-real.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/print.css" media="print">
+</head>
+<body>
+
+  <!-- =========================================================================
+       EN-TÊTE & NAVIGATION SOBRE
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" title="Mouhamad Jawad LY">
+        <span class="brand-monogram">JL</span>
+        <span><span class="brand-first-name">Mouhamad </span>Jawad LY</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Accueil</a></li>
+        <li><a href="#biographie" class="nav-link">Biographie</a></li>
+        <li><a href="#parcours" class="nav-link">Parcours & Prix</a></li>
+        <li><a href="#galerie" class="nav-link">Galerie d'Art</a></li>
+        <li><a href="#expertises" class="nav-link">Design & Tech</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Bouton Bascule Thème -->
+        <button class="btn-icon-toggle" id="themeToggleBtn" aria-label="Basculer le thème">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Bouton PDF (Toujours visible et accessible sans pousser) -->
+        <button class="btn btn-accent btn-sm btn-download-pdf" id="btnHeaderPdf" title="Télécharger le CV en PDF">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>PDF</span>
+        </button>
+
+        <!-- CTA Principal Header -->
+        <button class="btn btn-primary btn-sm btn-open-contact" id="btnHeaderContact">
+          <span class="btn-text-hide-mobile">Prendre </span><span>Contact</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         SECTION HERO : PRÉSENTATION CLAIRE & SOBRE
+         ========================================================================= -->
+    <section class="section hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Colonne Texte & Identité -->
+          <div class="hero-text-col">
+            <span class="hero-tag">Dakar, Sénégal • Village des Arts</span>
+
+            <h1 class="hero-title">
+              Mouhamad Jawad LY
+            </h1>
+
+            <p class="hero-lead">
+              Artiste plasticien contemporain, designer graphique et vibe coder. Je traduis les figures historiques et le patrimoine vivant en toiles peintes vibrantes, tout en façonnant des identités visuelles et des solutions numériques modernes.
+            </p>
+
+            <div class="hero-badges-row">
+              <span class="hero-pill">🏆 3e Prix National Union Européenne (2022)</span>
+              <span class="hero-pill">🎨 Itinéraire de Saint-Louis (2025)</span>
+              <span class="hero-pill">✒️ Identités & Logos</span>
+              <span class="hero-pill">⚡ Vibe Coder</span>
+            </div>
+
+            <div class="hero-actions">
+              <!-- CTA Principal qui ouvre le formulaire complet -->
+              <button class="btn btn-accent btn-open-contact" id="btnHeroMainCta">
+                <span>Prendre contact / Demander une œuvre</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+
+              <!-- Bouton Télécharger CV PDF visible directement dans le Hero -->
+              <button class="btn btn-outline btn-download-pdf" id="btnHeroPdf" title="Télécharger le CV en format PDF">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Télécharger mon CV (PDF)</span>
+              </button>
+
+              <a href="https://wa.me/221770000000?text=Bonjour%20Jawad,%20je%20souhaite%20vous%20contacter%20concernant%20vos%20œuvres%20d'art..." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" id="btnHeroWhatsapp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.477-.15-.678.15-.2.3-.777.978-.952 1.179-.175.2-.351.225-.652.075-.3-.15-1.267-.467-2.414-1.49-1.048-.934-1.756-2.087-1.961-2.438-.205-.351-.022-.541.128-.691.135-.135.301-.351.451-.527.151-.175.2-.3.301-.5.1-.2.05-.376-.025-.526-.075-.15-.678-1.635-.929-2.241-.244-.59-.492-.51-.678-.52-.175-.01-.376-.01-.577-.01-.2 0-.527.075-.803.376s-1.054 1.03-1.054 2.511c0 1.481 1.079 2.911 1.23 3.112.15.2 2.122 3.24 5.141 4.544 3.019 1.304 3.019.869 3.57.819.552-.05 1.78-.727 2.031-1.429.251-.702.251-1.304.175-1.429-.075-.125-.276-.2-.577-.35z"/>
+                  <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.05 22l4.98-1.34A9.957 9.957 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.167c-1.632 0-3.149-.479-4.426-1.307l-.317-.207-3.284.884.877-3.2-.224-.334A8.136 8.136 0 0 1 3.833 12c0-4.503 3.664-8.167 8.167-8.167 4.503 0 8.167 3.664 8.167 8.167 0 4.503-3.664 8.167-8.167 8.167z"/>
+                </svg>
+                <span>WhatsApp</span>
+              </a>
+
+              <a href="https://www.instagram.com/jawadly" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="btnHeroInstagram">
+                <span>Instagram @jawad_ly</span>
+              </a>
+            </div>
+
+            <div class="hero-meta-list">
+              <div class="hero-meta-item">
+                <strong>Atelier :</strong> Village des Arts, Dakar
+              </div>
+              <div class="hero-meta-item">
+                <strong>Email :</strong> jawadly.art@gmail.com
+              </div>
+              <div class="hero-meta-item">
+                <strong>Disponibilité :</strong> Acquisitions & Expositions
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonne Visuel : Portrait Réel de Jawad LY -->
+          <div class="hero-portrait-container">
+            <div class="hero-portrait-frame">
+              <img src="assets/images/jawad-ly-real.jpg" alt="Mouhamad Jawad LY en exposition d'art contemporain" class="hero-portrait-img" id="heroRealPortrait">
+              <div class="hero-portrait-caption">
+                Mouhamad Jawad LY lors d'une exposition
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION BIOGRAPHIE OFFICIELLE (TEXTE RÉEL DE JAWAD LY)
+         ========================================================================= -->
+    <section class="section" id="biographie">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Démarche & Vision</span>
+          <h2 class="section-title">Biographie</h2>
+          <p class="section-desc">
+            La quête artistique et le regard engagé de Mouhamad Jawad LY sur la mémoire, l'héritage et la société contemporaine.
+          </p>
+        </div>
+
+        <div class="bio-box">
+          <p class="bio-lead-text">
+            Jawad Ly vise à tisser des récits riches sous des formes visuelles, invitant le public à s'engager avec son patrimoine de manière accessible et évocatrice. En traduisant des figures historiques en toiles peintes vives, il remet en question les méthodes de narration traditionnelle et élève le discours artistique autour de la représentation culturelle.
+          </p>
+
+          <div class="bio-body-text">
+            <p>
+              L'engagement de Jawad Ly à explorer ces thèmes souligne sa conviction dans le pouvoir de l'art pour réfléchir et façonner les récits sociétaux, faisant de son travail non seulement un voyage personnel, mais aussi une contribution significative au dialogue plus large sur l'identité et l'histoire contemporaines.
+            </p>
+            <p>
+              Né dans une famille d'artistes, Mouhamad Jawad Ly a été profondément connecté à l'atmosphère vibrante du Village des Arts à Dakar. Il accompagnait souvent son père, Amadou DéDé Ly, dans son atelier dès son plus jeune âge. Cette immersion précoce a éveillé en lui une passion pour le dessin, qui s’est progressivement transformée en un intérêt profond pour la peinture. Il a officiellement commencé son parcours en peinture en 2020, pendant la pandémie.
+            </p>
+            <p>
+              En 2021, son chemin artistique a pris un nouvel élan grâce à une collaboration régulière avec son frère, Mahmoud Baba Ly, également installé au Village des Arts, ce qui lui a permis de s’épanouir pleinement au sein de cette communauté créative. En 2022, son engagement a été récompensé par une troisième place lors d’un concours national de peinture organisé par l’Union européenne. En 2024, il a participé à une exposition collective à Loman Art, aux côtés d'autres artistes.
+            </p>
+            <p>
+              En 2025, il participe à l’itinéraire de Saint-Louis, un événement majeur, aux côtés de grands artistes sénégalais tels que Tita Mbaye et Baba Ly, marquant une nouvelle étape importante dans son parcours artistique.
+            </p>
+          </div>
+        </div>
+
+        <!-- Chiffres Repères -->
+        <div class="stats-row">
+          <div class="stat-item-box">
+            <div class="stat-num">2020</div>
+            <div class="stat-text">Début officiel</div>
+            <div class="stat-sub">Parcours en peinture sur toile</div>
+          </div>
+          <div class="stat-item-box">
+            <div class="stat-num">3e Prix</div>
+            <div class="stat-text">Union Européenne</div>
+            <div class="stat-sub">Concours National de peinture (2022)</div>
+          </div>
+          <div class="stat-item-box">
+            <div class="stat-num">2025</div>
+            <div class="stat-text">Itinéraire de Saint-Louis</div>
+            <div class="stat-sub">Aux côtés de Tita Mbaye & Baba Ly</div>
+          </div>
+          <div class="stat-item-box">
+            <div class="stat-num">Dakar</div>
+            <div class="stat-text">Village des Arts</div>
+            <div class="stat-sub">Atelier de création continue</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION PARCOURS, PRIX & EXPOSITIONS
+         ========================================================================= -->
+    <section class="section" id="parcours">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Trajectoire Artistique</span>
+          <h2 class="section-title">Parcours & Expositions</h2>
+          <p class="section-desc">
+            Les grandes étapes, distinctions et événements jalonnant le développement de Mouhamad Jawad LY.
+          </p>
+        </div>
+
+        <div class="parcours-timeline">
+          <!-- 2025 -->
+          <div class="parcours-item">
+            <div class="parcours-year">2025</div>
+            <div class="parcours-body">
+              <div class="parcours-header-row">
+                <h3 class="parcours-title">Participation à l'Itinéraire de Saint-Louis</h3>
+                <span class="parcours-badge">Événement Majeur</span>
+              </div>
+              <div class="parcours-event">Saint-Louis, Sénégal</div>
+              <p class="parcours-desc">
+                Exposition prestigieuse aux côtés de figures majeures des arts visuels sénégalais tels que Tita Mbaye et son frère Baba Ly, marquant une nouvelle consécration dans sa carrière.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2024 -->
+          <div class="parcours-item">
+            <div class="parcours-year">2024</div>
+            <div class="parcours-body">
+              <div class="parcours-header-row">
+                <h3 class="parcours-title">Exposition Collective à Loman Art Gallery</h3>
+                <span class="parcours-badge">Exposition Collective</span>
+              </div>
+              <div class="parcours-event">Loman Art • Dakar</div>
+              <p class="parcours-desc">
+                Présentation d'œuvres sélectionnées lors d'une exposition collective réunissant des artistes plasticiens de premier plan.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2022 -->
+          <div class="parcours-item">
+            <div class="parcours-year">2022</div>
+            <div class="parcours-body">
+              <div class="parcours-header-row">
+                <h3 class="parcours-title">3ème Prix au Concours National de Peinture</h3>
+                <span class="parcours-badge">Distinction Nationale</span>
+              </div>
+              <div class="parcours-event">Organisé par l'Union Européenne au Sénégal</div>
+              <p class="parcours-desc">
+                Récompense nationale couronnant l'engagement artistique, l'originalité de son écriture picturale et la puissance de sa composition.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2021 -->
+          <div class="parcours-item">
+            <div class="parcours-year">2021</div>
+            <div class="parcours-body">
+              <div class="parcours-header-row">
+                <h3 class="parcours-title">Collaboration & Résidence au Village des Arts</h3>
+                <span class="parcours-badge">Atelier & Recherche</span>
+              </div>
+              <div class="parcours-event">Village des Arts • Dakar</div>
+              <p class="parcours-desc">
+                Collaboration régulière avec son frère Mahmoud Baba Ly au sein de la communauté créative du Village des Arts, affinant sa maîtrise des pigments et des toiles.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2020 -->
+          <div class="parcours-item">
+            <div class="parcours-year">2020</div>
+            <div class="parcours-body">
+              <div class="parcours-header-row">
+                <h3 class="parcours-title">Début Officiel du Parcours en Peinture</h3>
+                <span class="parcours-badge">Genèse Picturale</span>
+              </div>
+              <div class="parcours-event">Atelier de création • Période de la pandémie</div>
+              <p class="parcours-desc">
+                Après des années d'immersion dès l'enfance aux côtés de son père Amadou DéDé Ly, la passion du dessin se mue en un engagement total dans la peinture sur toile.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION GALERIE D'ŒUVRES RÉELLES
+         ========================================================================= -->
+    <section class="section" id="galerie">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Œuvres Authentiques</span>
+          <h2 class="section-title">Galerie de Peintures</h2>
+          <p class="section-desc">
+            Sélection de toiles originales signées Jawad Ly. Cliquez sur une œuvre pour la voir en grand format et consulter ses caractéristiques.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Œuvre 1 : Reine Ndaté Yalla Mbodj -->
+          <article class="artwork-card" data-art-id="art-1" tabindex="0" role="button" aria-label="Voir la toile Reine Ndaté Yalla Mbodj du Waalo">
+            <div class="artwork-thumb-wrap">
+              <img src="assets/images/oeuvre-femme-chat.jpg" alt="Reine Ndaté Yalla Mbodj du Waalo par Jawad Ly" class="artwork-thumb" loading="lazy">
+            </div>
+            <div class="artwork-body">
+              <span class="artwork-cat">Histoire & Résistance Anticoloniale</span>
+              <h3 class="artwork-title">Reine Ndaté Yalla Mbodj — Lingeer du Waalo</h3>
+              <div class="artwork-medium">Acrylique et techniques mixtes sur toile • Signée Jawad</div>
+              <p class="artwork-desc">
+                Hommage vibrant à la reine Ndaté Yalla Mbodj, dernière grande Linguère souveraine du Waalo et figure héroïque qui a combattu avec bravoure les colons français et Faidherbe au XIXe siècle.
+              </p>
+              <div class="artwork-footer">
+                <span class="artwork-cta">
+                  <span>Découvrir l'histoire</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </span>
+                <span class="hero-pill" style="padding: 0.15rem 0.6rem; font-size: 0.75rem;">Toile Historique</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Œuvre 2 : Les Bergers & l'Âne -->
+          <article class="artwork-card" data-art-id="art-2" tabindex="0" role="button" aria-label="Voir la toile La Traversée du Sahel">
+            <div class="artwork-thumb-wrap horizontal">
+              <img src="assets/images/oeuvre-bergers-ane.jpg" alt="La Traversée du Sahel — Les Bergers et l'Âne par Jawadly 23" class="artwork-thumb" loading="lazy">
+            </div>
+            <div class="artwork-body">
+              <span class="artwork-cat">Peinture Figurative</span>
+              <h3 class="artwork-title">La Traversée du Sahel — Les Bergers & l'Âne</h3>
+              <div class="artwork-medium">Huile & acrylique sur toile texturée • Signée Jawadly 23</div>
+              <p class="artwork-desc">
+                Composition sahélienne captant la poussière dorée, les silhouettes fières des pasteurs nomades et la docilité de leurs bêtes.
+              </p>
+              <div class="artwork-footer">
+                <span class="artwork-cta">
+                  <span>Agrandir l'œuvre</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </span>
+                <span class="hero-pill" style="padding: 0.15rem 0.6rem; font-size: 0.75rem;">Signée 2023</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Œuvre 3 : Le Sage au Grand Chapeau -->
+          <article class="artwork-card" data-art-id="art-3" tabindex="0" role="button" aria-label="Voir la toile Le Sage au Grand Chapeau">
+            <div class="artwork-thumb-wrap">
+              <img src="assets/images/oeuvre-sage-chapeau.jpg" alt="Le Sage au Grand Chapeau et aux Animaux par Jawad Ly" class="artwork-thumb" loading="lazy">
+            </div>
+            <div class="artwork-body">
+              <span class="artwork-cat">Peinture & Symbolisme</span>
+              <h3 class="artwork-title">Le Sage au Grand Chapeau & aux Animaux</h3>
+              <div class="artwork-medium">Techniques mixtes, pigments et matières sur toile</div>
+              <p class="artwork-desc">
+                Figure emblématique de la mémoire et de la transmission sous l'ombrage des arbres séculaires, entouré d'animaux fidèles.
+              </p>
+              <div class="artwork-footer">
+                <span class="artwork-cta">
+                  <span>Agrandir l'œuvre</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </span>
+                <span class="hero-pill" style="padding: 0.15rem 0.6rem; font-size: 0.75rem;">Village des Arts</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION EXPERTISES : DESIGN DE MARQUE & VIBE CODING
+         ========================================================================= -->
+    <section class="section" id="expertises">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Compétences Transversales</span>
+          <h2 class="section-title">Design Graphique & Vibe Coding</h2>
+          <p class="section-desc">
+            Au-delà des toiles, Jawad Ly étend sa créativité vers la création de logos mémorables et le développement web moderne.
+          </p>
+        </div>
+
+        <div class="extra-skills-row">
+          <!-- Carte 1 : Logos & Branding -->
+          <div class="extra-skill-card">
+            <img src="assets/images/branding-logos.jpg" alt="Création de logos et identités visuelles par Jawad LY" class="extra-skill-img">
+            <div>
+              <span class="section-tag" style="margin-bottom: 0.35rem;">Graphisme</span>
+              <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.4rem;">Création de Logos & Identités Visuelles</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.75rem;">
+                Conception de logotypes épurés, chartes graphiques de prestige et identités visuelles intemporelles pour entreprises et créateurs.
+              </p>
+              <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted);">
+                Adobe Illustrator • Photoshop • Figma
+              </span>
+            </div>
+          </div>
+
+          <!-- Carte 2 : Vibe Coding & Web -->
+          <div class="extra-skill-card">
+            <img src="assets/images/saas-vibecoding.jpg" alt="Vibe Coding et interfaces web créatives par Jawad LY" class="extra-skill-img">
+            <div>
+              <span class="section-tag" style="margin-bottom: 0.35rem;">Tech Créative</span>
+              <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.4rem;">Vibe Coding & Développement Web</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.75rem;">
+                Création rapide d'interfaces web interactives, de landing pages et d'applications modernes grâce aux méthodes de Vibe Coding assisté par IA.
+              </p>
+              <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted);">
+                HTML5 / Modern CSS / JavaScript / IA
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION CONTACT & PRISE DE RENDEZ-VOUS
+         ========================================================================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-section-box">
+          <span class="section-tag">Travaillons Ensemble</span>
+          <h2 class="section-title" style="margin-bottom: 0.75rem;">Prendre Contact avec l'Artiste</h2>
+          <p class="section-desc" style="max-width: 600px; margin-inline: auto;">
+            Vous souhaitez acquérir une toile, commander une œuvre sur mesure, concevoir votre identité de marque ou échanger autour d'une exposition ?
+          </p>
+
+          <div style="margin-top: 2rem;">
+            <button class="btn btn-accent btn-open-contact" id="btnSectionOpenContact" style="font-size: 1rem; padding: 0.85rem 2rem;">
+              <span>Ouvrir le formulaire de contact</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <div class="contact-channels-grid">
+            <!-- WhatsApp Direct -->
+            <a href="https://wa.me/221770000000?text=Bonjour%20Jawad,%20je%20souhaite%20vous%20contacter%20concernant%20vos%20œuvres..." target="_blank" rel="noopener noreferrer" class="contact-card-btn">
+              <div class="contact-card-icon" style="color: #128c7e;">💬</div>
+              <strong>WhatsApp Direct</strong>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Échange immédiat</span>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/jawadly" target="_blank" rel="noopener noreferrer" class="contact-card-btn">
+              <div class="contact-card-icon" style="color: #e1306c;">📸</div>
+              <strong>Instagram</strong>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">@jawad_ly</span>
+            </a>
+
+            <!-- Email avec 1-clic copie -->
+            <button class="contact-card-btn btn-copy-email" type="button" title="Copier l'email">
+              <div class="contact-card-icon" style="color: var(--accent-primary);">✉️</div>
+              <strong>Email</strong>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">jawadly.art@gmail.com</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       PIED DE PAGE
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <p style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+        Mouhamad Jawad LY — Artiste Plasticien, Designer Graphique & Vibe Coder
+      </p>
+      <p style="color: var(--text-muted); font-size: 0.85rem;">
+        Atelier au Village des Arts, Dakar, Sénégal • Tous droits réservés &copy; 2026.
+      </p>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALE DU FORMULAIRE DE CONTACT (CTA CLIENT)
+       ========================================================================= -->
+  <div class="modal-overlay" id="clientContactModal" role="dialog" aria-modal="true" aria-labelledby="inquiryModalTitle">
+    <div class="modal-card-container">
+      <button class="modal-close-icon" id="contactModalCloseBtn" aria-label="Fermer le formulaire">✕</button>
+      
+      <span class="section-tag" style="margin-bottom: 0.5rem;">Formulaire de Demande</span>
+      <h3 id="inquiryModalTitle" style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.4rem; color: var(--text-primary);">
+        Contacter Mouhamad Jawad LY
+      </h3>
+      <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.75rem;">
+        Remplissez ce formulaire pour préciser votre projet. Jawad vous répondra personnellement avec attention.
+      </p>
+
+      <form id="clientInquiryForm">
+        <div class="form-two-cols">
+          <div class="form-field-group">
+            <label for="inqName">Votre Nom Complet *</label>
+            <input type="text" id="inqName" placeholder="Ex: Awa Diop" required>
+          </div>
+          <div class="form-field-group">
+            <label for="inqOrg">Entreprise / Galerie / Institution</label>
+            <input type="text" id="inqOrg" placeholder="Optionnel">
+          </div>
+        </div>
+
+        <div class="form-two-cols">
+          <div class="form-field-group">
+            <label for="inqEmail">Votre Adresse Email *</label>
+            <input type="email" id="inqEmail" placeholder="contact@domaine.com" required>
+          </div>
+          <div class="form-field-group">
+            <label for="inqPhone">Téléphone / WhatsApp *</label>
+            <input type="tel" id="inqPhone" placeholder="Ex: +221 77 ... ou +33 ..." required>
+          </div>
+        </div>
+
+        <div class="form-two-cols">
+          <div class="form-field-group">
+            <label for="inqAddress">Adresse / Ville & Pays *</label>
+            <input type="text" id="inqAddress" placeholder="Ex: Dakar (Sénégal), Paris, Abidjan..." required>
+          </div>
+          <div class="form-field-group">
+            <label for="inqBudget">Budget Prévu / Envisagé *</label>
+            <input type="text" id="inqBudget" placeholder="Ex: 500 000 FCFA, 1 500 €, À convenir..." required>
+          </div>
+        </div>
+
+        <div class="form-field-group">
+          <label for="inqSubject">Objet de votre demande *</label>
+          <select id="inqSubject" required>
+            <option value="Acquisition d'une toile originale">Acquisition d'une toile originale</option>
+            <option value="Commande de tableau sur mesure">Commande de tableau personnalisé sur mesure</option>
+            <option value="Création de Logo & Identité Visuelle">Création de Logo & Identité Visuelle de marque</option>
+            <option value="Projet Vibe Coding & Web">Projet Vibe Coding & Développement Web</option>
+            <option value="Invitation Exposition / Galerie">Invitation pour une exposition / Galerie</option>
+            <option value="Autre demande">Autre demande artistique ou professionnelle</option>
+          </select>
+        </div>
+
+        <div class="form-field-group">
+          <label for="inqMessage">Détails de votre demande ou projet *</label>
+          <textarea id="inqMessage" rows="4" placeholder="Précisez votre besoin, vos préférences de dimensions ou vos délais..." required></textarea>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 1.5rem; justify-content: flex-end;">
+          <!-- Bouton envoi direct WhatsApp -->
+          <button type="button" class="btn btn-whatsapp" id="btnFormSendWhatsapp">
+            <span>Transmettre par WhatsApp</span>
+          </button>
+
+          <!-- Bouton validation directe -->
+          <button type="submit" class="btn btn-primary">
+            <span>Envoyer la demande</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODALE DE VISUALISATION D'ŒUVRE GRAND FORMAT
+       ========================================================================= -->
+  <div class="modal-overlay" id="artworkZoomModal" role="dialog" aria-modal="true" aria-labelledby="zoomModalTitle">
+    <div class="modal-artwork-box">
+      <button class="modal-close-icon" id="zoomModalCloseBtn" aria-label="Fermer la vue agrandie">✕</button>
+      <img src="" alt="" id="zoomModalImg" class="modal-artwork-img">
+      <div class="modal-artwork-content">
+        <h3 id="zoomModalTitle" style="font-size: 1.45rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.35rem;"></h3>
+        <div id="zoomModalMedium" style="font-size: 0.9rem; font-weight: 600; color: var(--accent-primary); margin-bottom: 0.85rem;"></div>
+        <p id="zoomModalDesc" style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem;"></p>
+        <button class="btn btn-accent btn-sm btn-open-contact">
+          <span>Se renseigner sur cette œuvre</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="siteToastNotice" class="toast-notice"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
