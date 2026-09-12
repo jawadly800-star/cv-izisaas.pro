@@ -1,32 +1,36 @@
+﻿# ==========================================================================
+# Serveur Web Local pour Jawad LY - Portfolio & CV
 # ==========================================================================
-# Serveur Web Local Ultra-Léger pour Jawad LY - Portfolio & CV
-# Fonctionne nativement sous Windows via PowerShell sans Node ni Python
-# ==========================================================================
 
-$port = 3000
-$root = $PSScriptRoot
+$ports = @(5000, 5001, 8080, 3000)
+$root = "C:\Users\HP\cv izisaas"
+$listener = $null
+$activePort = 0
 
-$listener = New-Object System.Net.HttpListener
-$listener.Prefixes.Add("http://localhost:$port/")
-$listener.Prefixes.Add("http://127.0.0.1:$port/")
-
-try {
-    $listener.Start()
-    Write-Host "==========================================================" -ForegroundColor Cyan
-    Write-Host "  CV & PORTFOLIO DE JAWAD LY EN LIGNE" -ForegroundColor Yellow
-    Write-Host "  Serveur actif sur : http://localhost:$port/" -ForegroundColor Green
-    Write-Host "==========================================================" -ForegroundColor Cyan
-} catch {
-    $port = 3001
-    $listener = New-Object System.Net.HttpListener
-    $listener.Prefixes.Add("http://localhost:$port/")
-    $listener.Prefixes.Add("http://127.0.0.1:$port/")
-    $listener.Start()
-    Write-Host "Serveur local démarré sur http://localhost:$port/" -ForegroundColor Green
+foreach ($p in $ports) {
+    try {
+        $l = New-Object System.Net.HttpListener
+        $l.Prefixes.Add("http://localhost:$p/")
+        $l.Start()
+        $listener = $l
+        $activePort = $p
+        break
+    } catch {
+        if ($l) { $l.Close() }
+    }
 }
 
-# Lancement automatique du navigateur
-Start-Process "http://localhost:$port/"
+if (-not $listener) {
+    Write-Host "Impossible de démarrer le serveur local." -ForegroundColor Red
+    exit 1
+}
+
+$url = "http://localhost:$activePort/"
+Write-Host "==========================================================" -ForegroundColor Cyan
+Write-Host "  PORTFOLIO LOCAL ACTIF SUR : $url" -ForegroundColor Green
+Write-Host "==========================================================" -ForegroundColor Cyan
+
+Start-Process $url
 
 $mimeTypes = @{
     ".html"  = "text/html; charset=utf-8"
@@ -60,8 +64,6 @@ while ($listener.IsListening) {
             $ext = [System.IO.Path]::GetExtension($filePath).ToLower()
             $mime = if ($mimeTypes.ContainsKey($ext)) { $mimeTypes[$ext] } else { "application/octet-stream" }
             $response.ContentType = $mime
-            
-            # Cache control
             $response.AddHeader("Cache-Control", "no-cache, no-store, must-revalidate")
             
             $bytes = [System.IO.File]::ReadAllBytes($filePath)
@@ -69,12 +71,12 @@ while ($listener.IsListening) {
             $response.OutputStream.Write($bytes, 0, $bytes.Length)
         } else {
             $response.StatusCode = 404
-            $buffer = [System.Text.Encoding]::UTF8.GetBytes("Fichier non trouvé (404)")
+            $buffer = [System.Text.Encoding]::UTF8.GetBytes("404 Not Found")
             $response.ContentLength64 = $buffer.Length
             $response.OutputStream.Write($buffer, 0, $buffer.Length)
         }
         $response.Close()
     } catch {
-        # Ignorer les interruptions client
+        # Continuer
     }
 }

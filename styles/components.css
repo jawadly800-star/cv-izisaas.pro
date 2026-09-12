@@ -35,17 +35,29 @@
 }
 
 .brand-monogram {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: var(--radius-sm);
   background: var(--text-primary);
   color: var(--bg-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-serif);
-  font-weight: 800;
-  font-size: 0.95rem;
+  transition: transform var(--transition), background-color var(--transition), color var(--transition), box-shadow var(--transition);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.brand-logo:hover .brand-monogram {
+  transform: rotate(-10deg) scale(1.08);
+  background: var(--accent-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(180, 83, 9, 0.25);
+}
+
+.brand-brush-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
 .nav-links {
